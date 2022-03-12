@@ -6,12 +6,37 @@ body {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-h1 {
-  font-size: 500.5%;
+h1 { 
+  font-size: 150.5%;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 2;
-  margin: 50px auto 0 auto;
-  color:beige
+  color:beige;
+
+}
+
+.try {
+  width: 50%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 2;
+  color:beige;
+  overflow: hidden;
+  border-right: .01em solid rgb(37, 165, 37);
+  white-space: nowrap;
+  margin: 80px auto 0 auto;
+  letter-spacing: .15em;
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from {width: 0 }
+  to {width: 50%}
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color:rgb(255, 244, 244); }
 }
 
 h2 {
@@ -91,7 +116,31 @@ hr {
   border-radius: 100%;
   margin: 20px;
   width: 200px;
+  animation-name: bouncy-prof;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transition: 1s;
 }
+
+.profilepic:hover {
+  width: 250px;
+}
+
+@keyframes bouncy-prof {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(50deg);
+  }
+  75% {
+    transform: rotate(175deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 .intro {
   width: 30%;
@@ -117,11 +166,30 @@ hr {
 }
 
 .developer {
-  color:rgb(255, 247, 200);
+  color:rgb(255, 237, 117);
   font-family: 'DONGLE';
   font-size: 30px;
   font-weight:bold;
   margin-top: 0;
+  overflow: hidden;
+  border-right: .10em solid rgb(255, 222, 111);
+  white-space: nowrap;
+  margin: 20px auto 20px auto;
+  width: 40%;
+  letter-spacing: .15em;
+  animation: 
+    typing2 3.5s steps(30, end),
+    blink-caret2 .75s step-end infinite;
+}
+
+@keyframes typing2 {
+  from {width: 0 }
+  to {width: 37%}
+}
+
+@keyframes blink-caret2 {
+  from, to { border-color: transparent }
+  40% { border-color:rgb(106, 255, 168); }
 }
 
 .level-up {
